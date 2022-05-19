@@ -49,8 +49,5 @@ export const parseRobotText = (grid, robotString) => {
   }
 };
 
-export const printParsed = ({ position: [x, y], xyTransform, isLost }) => {
-  console.log(
-    `(${x}, ${y}, ${cardinals[xyTransform.toString()]})${isLost ? " LOST" : ""}`
-  );
-};
+export const printParsed = ({ position: [x, y], xyTransform, isLost }) =>
+  `(${x}, ${y}, ${cardinals[xyTransform.toString()]})${isLost ? " LOST" : ""}`;
