@@ -36,10 +36,15 @@ const rotationMatrices = {
 };
 
 // Executes a rotation on the xyTransform vector with matrix multiplication
-const rotate = (move, robot) => ({
-  ...robot,
-  xyTransform: multiply(rotationMatrices[move], robot.xyTransform),
-});
+const rotate = (move, robot) => {
+  // Do nothing if robot is already lost
+  if (robot.isLost) return robot;
+
+  return {
+    ...robot,
+    xyTransform: multiply(rotationMatrices[move], robot.xyTransform),
+  };
+};
 
 // Executes a translation of the position with vector addition
 const moveForward = (robot) => {
