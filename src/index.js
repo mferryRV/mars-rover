@@ -17,7 +17,12 @@ const grid = parseGrid(gridText);
 // Process each robot
 robotsText
   .map((line) => parseRobotText(grid, line))
-  .map(({ robot, moves }) =>
-    moves.reduce((robotUpdate, move) => move(robotUpdate), robot)
+  .map(
+    (parsed) =>
+      parsed &&
+      parsed.moves.reduce(
+        (robotUpdate, move) => move(robotUpdate),
+        parsed.robot
+      )
   )
-  .map((robot) => printParsed(robot));
+  .map((robot) => robot && printParsed(robot));
