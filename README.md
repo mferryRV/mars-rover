@@ -22,16 +22,8 @@ To test outputs for inputs not included in the design brief, run:
 
 ## Testing
 
-You can see outputs for inputs from the brief with:
+You can run a set of automated tests with:
 
 ```bash
-  $ npm run test:1
-  $ npm run test:2
+  $ npm run test
 ```
-
-Unfortunately `npm run test` won't yet do these checks automatically. This would be my next focus, as described in `src/test.js`
-
-## TODO:
-
-- Automate testing with `jest`
-- Run tests automatically on commit with `husky`
