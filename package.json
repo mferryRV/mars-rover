@@ -1,0 +1,23 @@
+{
+  "name": "mars-rover",
+  "version": "1.0.0",
+  "description": "Helping some robots navigate around mars",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --experimental-specifier-resolution=node src/index.js",
+    "test:1": "npm run start -- ./data/test-1-input.txt",
+    "test:2": "npm run start -- ./data/test-2-input.txt",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mferryRV/mars-rover.git"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "jest": "^28.1.0",
+    "mathjs": "^10.5.3",
+    "readline-sync": "^1.4.10"
+  }
+}
