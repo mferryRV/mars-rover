@@ -30,3 +30,8 @@ You can see outputs for inputs from the brief with:
 ```
 
 Unfortunately `npm run test` won't yet do these checks automatically. This would be my next focus, as described in `src/test.js`
+
+## TODO:
+
+- Automate testing with `jest`
+- Run tests automatically on commit with `husky`
