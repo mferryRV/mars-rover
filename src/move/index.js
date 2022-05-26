@@ -36,7 +36,7 @@ const rotationMatrices = {
 };
 
 // Executes a rotation on the xyTransform vector with matrix multiplication
-const rotate = (move, robot) => {
+export const rotate = (move, robot) => {
   // Do nothing if robot is already lost
   if (robot.isLost) return robot;
 
@@ -47,7 +47,7 @@ const rotate = (move, robot) => {
 };
 
 // Executes a translation of the position with vector addition
-const moveForward = (robot) => {
+export const moveForward = (robot) => {
   // Do nothing if robot is already lost
   if (robot.isLost) return robot;
 
